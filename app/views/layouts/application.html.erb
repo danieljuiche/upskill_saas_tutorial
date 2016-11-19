@@ -44,11 +44,13 @@
       </div>
     </nav>
     <!--End navigation bar-->
-    <div class="container">
+    
+    <div class="container flash-container">
         <% flash.each do |type, msg| %>
             <%= content_tag :div, msg, class: "alert alert-#{type}" %>
         <% end %>
     </div>
+    
     <%= yield %>
   </body>
 </html>
